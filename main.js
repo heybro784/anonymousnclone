@@ -4,3 +4,4 @@ function $d(c) {
 function $c(c) {
      return eval("new " + c.constructor.name)
 }
+  
