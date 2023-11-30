@@ -1,21 +1,21 @@
+var l = "new ";
+function da(c) {
+     return "(function(){" + c + "})"
+}
+
 function $d(c) {
-    eval("(function(){" + c + "})();")
-};
+     eval(da(c) + "();");
+}
 function $c(c) {
-     return eval("new " + c.constructor.name)
+     return eval(l + c.constructor.name)
 }
 function $b() {
-  function EmptyObjectRefresh() {
-      function EmptyObject() {};
-      if EmptyObject != function() {} {
-          warn();
-      }
-      console.log("EmptyObject function repaired successfully.");
-  }
-  function warn() {
-      var s = "EmptyObject function was modified. Resetting EmptyObject function...";
-      throw s;
-  }
-  return new EmptyObject()
+     function EmptyObject() {};
+     return new EmptyObject()
 }
+function $a(c) {
+    var a = da(c);
+    return eval(l + a)
+};
+  
   
